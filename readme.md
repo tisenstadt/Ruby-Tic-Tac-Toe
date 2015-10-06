@@ -1,0 +1,1 @@
+Welcome to Tic-Tac-Toe! This is a game for one player and a computer opponent at a challenging difficulty level. Have fun!
