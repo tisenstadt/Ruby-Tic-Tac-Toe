@@ -14,7 +14,7 @@ def player_movetest
 			
 	def endgame_test_is_true
 		puts "Testing if a GameOver win condition is recognized."
-			endgame = gameover.winner?(["X", "X", "X", 4, 5, 6, 7,8,9])
+			endgame = gameover.winner(["X", "X", "X", 4, 5, 6, 7,8,9])
 			if endgame == true
 				puts "pass"
 			else 
@@ -25,7 +25,7 @@ def player_movetest
 	
 	def endgame_test_is_false
 		puts "Ensuring that a false GameOver condition is processed correctly"
-		endgame = gameover.winner?([1, "X", "O", 4, 5, 6, 7, 8, 9])
+		endgame = gameover.winner([1, "X", "O", 4, 5, 6, 7, 8, 9])
 		if endgame == true
 			puts "fail"
 		else 
@@ -37,7 +37,7 @@ def player_movetest
 		puts "Test to ensure a player movement triggers the endgame condition"
 		game.board = ["1", "X", "3", "4", "X", "6", "7", "8", "9"]
 		update_with_human_move(8)
-			if gameover.winner?(game.board) == true
+			if gameover.winner(game.board) == true
 				puts "pass"
 			else 
 				puts "fail"
